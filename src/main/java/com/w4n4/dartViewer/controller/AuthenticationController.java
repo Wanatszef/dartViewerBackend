@@ -25,7 +25,7 @@ public class AuthenticationController {
         this.authService = authService;
     }
 
-    @CrossOrigin(origins = FRONT_URL)
+
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody User request
@@ -33,7 +33,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(authService.register(request));
     }
 
-    @CrossOrigin(origins = FRONT_URL)
+
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> login(
             @RequestBody User request

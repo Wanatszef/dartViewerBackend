@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -32,6 +33,9 @@ public class User implements UserDetails
 
     @Column(name = "rating")
     private Integer rating;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<Friend> friends;
 
     public int getId() {
         return id;
