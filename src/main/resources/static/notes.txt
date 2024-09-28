@@ -1,0 +1,11 @@
+Przykładowy wygląd obiektu zaproszenia do gry:
+
+{
+  "type": "gameInvitation",
+  "data": {
+    "command" : "sendInvite",
+    "from": "1",
+    "to": "2",
+    "GameID": "1"
+  }
+}
