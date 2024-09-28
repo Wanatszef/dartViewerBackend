@@ -37,6 +37,9 @@ public class User implements UserDetails
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Friend> friends;
 
+    @Column(name = "status")
+    private String status;
+
     public int getId() {
         return id;
     }
@@ -105,4 +108,12 @@ public class User implements UserDetails
     public void setRating(Integer rating) {this.rating = rating;}
 
     public Integer getRating(){return this.rating;}
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

@@ -2,9 +2,15 @@ package com.w4n4.dartViewer.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
+@Entity
 public class UserDto
 {
 
+    @Id
+    @Column(name = "id_User")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String username;
